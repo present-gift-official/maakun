@@ -3,196 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>npo法人◯◯ | 生活困窮者自立支援全国ネットワーク</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <title>プレゼント受け取りページ</title>
+
     <style>
-        /* 基本設定 */
         body {
-            margin: 0;
-            font-family: 'Noto Sans JP', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: #fff;
-        }
-
-        /* ヘッダー */
-        header {
-            padding: 20px;
-            background: #fff;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background-color: #f4f7f6;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-        }
-        .logo {
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        /* メインビジュアル */
-        .hero {
-            width: 100%;
-            height: 300px;
-            background-color: #e1f5fe; /* 水色の背景 */
-            background-image: url('hero-image.png'); /* ここにイラスト画像をアップロード */
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .hero-text {
-            color: #4db6ac;
-            font-size: 1.5rem;
-            font-weight: bold;
+        .container {
             text-align: center;
-            text-shadow: 1px 1px 2px white;
-        }
-
-        /* ボタンセクション */
-        .action-buttons {
-            padding: 30px 20px;
-            background-color: #fdfaf5;
-            text-align: center;
-        }
-        .btn {
-            display: block;
-            max-width: 300px;
-            margin: 10px auto;
-            padding: 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #fff;
-            transition: opacity 0.3s;
-        }
-        .btn-line { background-color: #ff8a80; } /* 相談窓口（ピンク） */
-        .btn-support { background-color: #66bb6a; } /* 支援内容（グリーン） */
-        .btn:hover { opacity: 0.8; }
-
-        /* 紹介テキストセクション */
-        .about-section {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .about-section h2 {
-            color: #66bb6a;
-            border-bottom: 2px solid #66bb6a;
-            padding-bottom: 10px;
-            font-size: 1.4rem;
-        }
-
-        /* 事業内容リンク（テキストのみ） */
-        .nav-links {
             padding: 20px;
-            background: #f9f9f9;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 400px;
         }
-        .nav-links ul {
-            list-style: none;
-            padding: 0;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .nav-links li {
-            border-bottom: 1px solid #ddd;
-        }
-        .nav-links a {
-            display: block;
-            padding: 15px;
+        h1 {
+            font-size: 18px;
             color: #333;
+            margin-bottom: 20px;
+        }
+        .line-button {
+            display: inline-block;
+            background-color: #06C755;
+            color: white;
             text-decoration: none;
-            position: relative;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(6, 199, 85, 0.3);
+            cursor: pointer;
         }
-        .nav-links a::after {
-            content: '→';
-            position: absolute;
-            right: 15px;
+        .line-button:active {
+            transform: scale(0.98);
         }
-
-        /* フッター */
-        footer {
-            background-color: #81d4fa;
-            background-image: url('footer-bg.png'); /* 水色のイラスト背景用 */
-            background-size: cover;
-            padding: 40px 20px;
-            color: #333;
+        .notice {
+            font-size: 14px;
+            color: #e63946; /* 注意を引くために少し赤っぽくしています */
+            font-weight: bold;
+            margin-top: 15px;
+            line-height: 1.6;
         }
-        .footer-info { margin-bottom: 30px; }
-        .footer-links {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            font-size: 0.9rem;
-        }
-        .footer-links a {
-            color: #333;
-            text-decoration: none;
-        }
-        .copyright {
-            margin-top: 30px;
-            text-align: center;
-            font-size: 0.8rem;
+        .sub-notice {
+            font-size: 12px;
+            color: #888;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">npo法人◯◯</div>
-    </header>
+<div class="container">
+    <h1>公式LINEを追加して<br>プレゼントを受け取ってください</h1>
+    
+    <a href="https://lin.ee/Vi0Ovm8"class="line-button" onclick="ttq.track('CompleteRegistration')">
+        LINE友だち追加する
+    </a>
 
-<div class="hero">
-    <div class="hero-text">
-        生活困窮者<br>自立支援全国ネットワーク
-    </div>
+    <p class="notice">
+        【重要】ボタンが反応しない場合は、<br>
+        ボタンを「長押し」して開いてください。
+    </p>
+
+    <p class="sub-notice">※この広告は一度のみ表示されます。</p>
 </div>
-
-<section class="action-buttons">
-    <p style="font-size: 0.9rem; margin-bottom: 15px;">今の生活に不安を抱えて相談を希望される方へ</p>
-    <a href="https://line.me/R/ti/p/your-id" class="btn btn-line">相談窓口はこちら（LINE）</a>
-    <a href="support.html" class="btn btn-support">支援内容はこちら</a>
-</section>
-
-<section class="about-section">
-    <h2>生活困窮者自立支援全国ネットワークについて</h2>
-    <p>
-        経済的困窮や社会的孤立など、生活困窮状況に置かれた人々が抱える課題は多様・多重化しています。平成27（2015）年度の「生活困窮者自立支援法」の本格実施に向けて、すでに地域において生活困窮者支援に携わってきた人々、当事者、学識経験者などがネットワークを結び、共に学び支え合い、連携して政策の推進を図っていくことを目的に、2014年11月8日に「生活困窮者自立支援全国ネットワーク」を設立しました。
-    </p>
-    <p>
-        毎年「全国研究交流大会」を開催し、最新情報とともに参加者・講師の出会いと学びをお届けします。ぜひ、あなたも仲間に加わりませんか？
-    </p>
-</section>
-
-<nav class="nav-links">
-    <ul>
-        <li><a href="business.html">事業内容</a></li>
-        <li><a href="subsidy.html">助成事業</a></li>
-        <li><a href="social-activity.html">社会活動</a></li>
-        <li><a href="organization.html">組織概要</a></li>
-    </ul>
-</nav>
-
-<footer>
-    <div class="footer-info">
-        <strong>一般社団法人<br>生活困窮者自立支援全国ネットワーク</strong><br>
-        <p style="font-size: 0.9rem;">
-            〒169-0072 東京都新宿区大久保2-4-15 サンライズ新宿 3階
-        </p>
-    </div>
-
-    <div class="footer-links">
-        <a href="#">リンク</a>
-        <a href="#">プライバシーポリシー</a>
-        <a href="#">特定商取引法に基づく表記</a>
-        <a href="#">お問い合わせ</a>
-    </div>
-
-    <div class="copyright">
-        Copyright © 2026 npo法人◯◯ All Rights Reserved.
-    </div>
-</footer>
 
 </body>
 </html>
