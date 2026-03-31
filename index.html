@@ -3,78 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プレゼント受け取りページ</title>
-
+    <title>プレゼントページ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            background-color: #f4f7f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            width: 90%;
-            max-width: 400px;
-        }
-        h1 {
-            font-size: 18px;
+            font-family: 'Noto Sans JP', sans-serif;
             color: #333;
-            margin-bottom: 20px;
+            background-color: #fff;
         }
-        .line-button {
-            display: inline-block;
+
+        .hero {
+            width: 100%;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .action-buttons {
+            padding: 20px 20px 15px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .btn-line {
+            display: block;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 14px 15px;
+            border-radius: 6px;
             background-color: #06C755;
-            color: white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 20px;
-            padding: 15px 30px;
-            border-radius: 50px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 10px rgba(6, 199, 85, 0.3);
-            cursor: pointer;
+            font-size: 0.95rem;
+            color: #fff;
+            transition: opacity 0.3s;
         }
-        .line-button:active {
-            transform: scale(0.98);
-        }
-        .notice {
-            font-size: 14px;
-            color: #e63946; /* 注意を引くために少し赤っぽくしています */
+        .btn-line:hover { opacity: 0.8; }
+
+        .note-text {
+            margin: 8px auto 0;
+            font-size: 0.85rem;
             font-weight: bold;
-            margin-top: 15px;
-            line-height: 1.6;
+            color: #ff4444;
         }
-        .sub-notice {
-            font-size: 12px;
-            color: #888;
-            margin-top: 10px;
+
+        .help-text {
+            margin: 6px auto 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: #555;
+            white-space: nowrap;
+        }
+
+        .divider {
+            height: 25px;
+        }
+
+        .step0-image {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            display: block;
+            margin: 15px auto 25px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .browser-images {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px auto 10px auto;
+            max-width: 100%;
+        }
+        .browser-image-wrapper {
+            width: 48%;
+            max-width: 200px;
+            text-align: center;
+        }
+        .image-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .browser-image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>公式LINEを追加して<br>プレゼントを受け取ってください</h1>
-    
-    <a href="https://lin.ee/Vi0Ovm8"class="line-button" onclick="ttq.track('CompleteRegistration')">
-        LINE友だち追加する
-    </a>
-
-    <p class="notice">
-        【重要】ボタンが反応しない場合は、<br>
-        ボタンを「長押し」して開いてください。
-    </p>
-
-    <p class="sub-notice">※この広告は一度のみ表示されます。</p>
+<div class="hero">
+    <img src="LP.JPG" alt="LINE">
 </div>
+
+<section class="action-buttons">
+    <a href="https://lin.ee/Vi0Ovm8" class="btn-line">LINEアプリを開く</a>
+    <p class="note-text">上のボタンは長押しして開いて下さい</p>
+    <p class="help-text">🔻開けない場合は以下をご確認ください🔻</p>
+</section>
+
+<div class="divider"></div>
+
+<section class="action-buttons">
+    <p><b>ボタンを長押し→リンクを開く</b></p>
+
+    <img src="step0.JPEG" alt="step0.JPEG" class="step0-image">
+
+    <p style="font-weight: bold; margin-top: 30px;">またはブラウザで開く</p>
+
+    <div class="browser-images">
+        <div class="browser-image-wrapper">
+            <div class="image-label">①</div>
+            <img src="step1.JPEG" alt="①">
+        </div>
+        <div class="browser-image-wrapper">
+            <div class="image-label">②</div>
+            <img src="step2.JPEG" alt="②">
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
